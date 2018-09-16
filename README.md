@@ -1,5 +1,7 @@
 # flutter_api_filter_list
 
+An article accompanying this project can be found [here](https://medium.com/flutterpub/a-simple-search-bar-in-flutter-f99aed68f523)
+
 A new Flutter demo application built to show people an easy way to do the following:
 
 - Query an API for some info using flutter package dio

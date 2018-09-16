@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
 }
 
 class ExamplePage extends StatefulWidget {
-  ExamplePage({ Key key }) : super(key: key);
+  // ExamplePage({ Key key }) : super(key: key);
   @override
   _ExamplePageState createState() => new _ExamplePageState();
 }
 
 class _ExamplePageState extends State<ExamplePage> {
-  final formKey = new GlobalKey<FormState>();
-  final key = new GlobalKey<ScaffoldState>();
+ // final formKey = new GlobalKey<FormState>();
+ // final key = new GlobalKey<ScaffoldState>();
   final TextEditingController _filter = new TextEditingController();
   final dio = new Dio();
   String _searchText = "";
