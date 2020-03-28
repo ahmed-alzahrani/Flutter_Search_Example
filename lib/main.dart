@@ -79,9 +79,9 @@ class _ExamplePageState extends State<ExamplePage> {
   Widget _buildList() {
     if (!(_searchText.isEmpty)) {
       List tempList = new List();
-      for (int i = 0; i < filteredNames.length; i++) {
-        if (filteredNames[i]['name'].toLowerCase().contains(_searchText.toLowerCase())) {
-          tempList.add(filteredNames[i]);
+      for (int i = 0; i < names.length; i++) {
+        if (names[i]['name'].toLowerCase().contains(_searchText.toLowerCase())) {
+          tempList.add(names[i]);
         }
       }
       filteredNames = tempList;
@@ -119,12 +119,10 @@ class _ExamplePageState extends State<ExamplePage> {
 
   void _getNames() async {
     final response = await dio.get('https://swapi.co/api/people');
-    List tempList = new List();
     for (int i = 0; i < response.data['results'].length; i++) {
-      tempList.add(response.data['results'][i]);
+      names.add(response.data['results'][i]);
     }
     setState(() {
-      names = tempList;
       names.shuffle();
       filteredNames = names;
     });
